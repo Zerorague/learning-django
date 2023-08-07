@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantilla html</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    {% include "barra.html" %}
+
+
+    <h1> esto es una plantilla</h1>
+    <h2>AQUI SE CARGA LA PLANTILLA DESDE EL LOADER</h2>
+    {% if nombre.capitalize == "Julio" or nombre.capitalize == "Natalia" %}
+    <p>Bienvenido {{nombre.capitalize}}</p>
+    {% else %}
+    <p>{{nombre.capitalize}} no pertenece aqui</p>
+
+    {% endif %}
+    <h2>estamos viendo nuestra primera plantilla</h2>
+    <h3>Mi nombre es: {{nombre.capitalize}} {{apellido.capitalize}}</h3>
+    <p>esto son parrafos en html</p>
+    <p>esto son parrafos en html</p>
+    <p>esto son parrafos en html</p>
+    <p>esto son parrafos en html</p>
+    <p>esto son parrafos en html</p>
+    <p>Temas del curso:</p>
+    <ul>
+        {% if temas %}
+        {% for elTema in temas %}
+
+
+        <li>{{elTema | first | lower}}</li> <!--Estos son los filtros django trmplate filters buscar-->
+
+
+
+
+        {% endfor %}
+        {% else %}
+        <p>no hay elmentos ahora</p>
+        {% endif %}
+    </ul>
+    <p>aqui va el elemento 2 de la lista {{temas.1}}</p>
+    <!--Con la nomeclatura del punto puedo acceder a los elementos de la lista conteinidos dentro de key de un diccionario-->
+    <footer>esto el d&iacute;a {{fecha.day}} mes {{fecha.month}} a&ntilde;o {{fecha.year}}</footer>
+
+</body>
+
+</html>

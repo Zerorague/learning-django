@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+</head>
+
+<body
+    style="background-color: bisque; margin: 0%; padding: 0%; display: flex; flex-direction: column; align-items: center;">
+    <h1
+        style="background-color: darkgreen; color: aliceblue; display: flex; justify-content: center; width: 100vw; padding: 2rem; margin-top: 0%;">
+        Julio San Martin
+        Batarce</h1>
+    {% include "barra.html" %}
+    <h2> Cursos de programacion ofimatica y diseño web</h2>
+
+    {% block content %}
+
+
+    {% endblock %}
+
+
+    <p
+        style="background-color: blue; color: aliceblue; text-align: center; width: 100vw; padding: 1rem; margin-bottom: 0%;">
+        Cursos
+        gratuitos. Gracias por
+        tu
+        visita</p>
+
+
+</body>
+
+</html>

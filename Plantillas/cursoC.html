@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %} Curso C {% endblock %}
+
+
+{% block content %}
+
+
+
+<ul style="display: flex; flex-direction: column; align-items: center;">
+    {% for i in temas %}
+    <li style="list-style: none; background-color: blanchedalmond; width: 6rem; margin-bottom: 3rem;">{{i}}</li>
+    {% endfor %}
+</ul>
+
+
+
+
+
+
+
+{% endblock %}

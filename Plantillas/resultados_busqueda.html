@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %} resultado Busqueda {% endblock %}
+
+
+{% block content %}
+<p> Estas buscando: <strong>{{query}}</strong></p>
+{% if articulos %}
+<p>Articulos encontrados : {{ articulos | length }}</p>
+<ul>
+    {% for art in articulos %}
+
+    <li>{{art.nombre}} &nbsp; {{art.seccion}} &nbsp; ${{art.precio}} clp</li>
+
+
+    {% endfor %}
+
+</ul>
+
+{% else %}
+<p>no se encontro el articulo {{query}}</p>
+
+{% endif %}
+
+{% endblock %}
