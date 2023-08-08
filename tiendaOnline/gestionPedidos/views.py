@@ -4,6 +4,7 @@ from gestionPedidos.models import Articulos
 from django.core.mail import send_mail
 from django.conf import settings
 from tiendaOnline.settings import EMAIL_HOST_USER
+from helpers.enviarCorreo import enviarCorreo
 
 
 # Create your views here.
@@ -44,14 +45,15 @@ def contacto(request):
         recipient_list = [
             "julioasmb@gmail.com",
         ]
-        send_mail(subject, message, email_from, recipient_list, fail_silently=False)
-        send_mail(
-            "confirmacion solicitud",
-            "sulicitud ingresada con exito",
+
+        enviarCorreo(subject, email_from, recipient_list, message)
+        enviarCorreo(
+            "confirmacion",
             email_from,
             [request.POST["correo-contacto"]],
-            fail_silently=False,
+            "gracias por contactarnos",
         )
+
         return render(request, "gracias.html")
     else:
         return render(request, "contacto.html")

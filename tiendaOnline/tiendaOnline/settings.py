@@ -128,9 +128,5 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
-EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST = "mail.ermis.cl"
-EMAIL_USE_TLS = True
-EMAIL_PORT = 465
-EMAIL_HOST_USER = "julio@ermis.cl"
-EMAIL_HOST_PASSWORD = "GxlpSU?C#F2o"
+EMAIL_HOST_USER = "julioasmb@gmail.com"
+EMAIL_HOST_PASSWORD = "egrgbixogbmkszgz"
